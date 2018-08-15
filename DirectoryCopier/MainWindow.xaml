@@ -1,0 +1,31 @@
+﻿<Window x:Class="DirectoryCopier.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Copy Directories" Height="250" Width="550" WindowStartupLocation="CenterScreen" FontSize="14" Background="WhiteSmoke">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="*"  />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="1" Grid.Column="1" Content="Source Folder Directory" />
+        <TextBox Grid.Row="2" Grid.Column="1" Height="25" Width="425" Name="txtSource" TextChanged="txtSource_TextChanged" />
+        <Button Grid.Row="2" Grid.Column="2" Height="25" Width="75" Content="Browse" Name="btnBrowse" Click="btnBrowse_Click" />
+        <GroupBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Header="Destination Servers" BorderBrush="Black">
+            <StackPanel Orientation="Horizontal" Name="spServers" Margin="0,10,0,0" />
+        </GroupBox>
+        <Button Grid.Row="5" Grid.Column="2" Content="Publish" VerticalAlignment="Center" Height="25" Width="75" Name="btnPublish" Click="btnPublish_Click" IsEnabled="false"/>
+    </Grid>
+</Window>
